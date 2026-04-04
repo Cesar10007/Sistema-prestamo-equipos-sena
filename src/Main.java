@@ -21,6 +21,7 @@ public class Main {
             System.out.println("6. Devolver equipo");
             System.out.println("7. Salir");
             opcion = sc.nextInt();
+            sc.nextLine();
             switch (opcion) {
                 case 1:
                     try {
@@ -42,10 +43,11 @@ public class Main {
                     try{
                         System.out.println("Ingrese el codigo del equipo: ");
                         String codigoequipo = sc.next();
-                        System.out.println("Ingrese el nombre del equipo: ");
-                        String nombreequipo = sc.next();
-                        System.out.println("Ingrese la categoria del equipo del equipo: \n");
-                        String categoriaequipo = sc.next();
+                        sc.nextLine();
+                        System.out.println("Ingrese el nombre del equipo: (sea la marca EJEMPLO: SAMSUNG)");
+                        String nombreequipo = sc.nextLine();
+                        System.out.println("Ingrese la categoria del equipo del equipo: (EJEMPLO: PORTÁTIL, COMPUTADOR)");
+                        String categoriaequipo = sc.nextLine();
                         Equipo equipo = new Equipo(codigoequipo, nombreequipo, categoriaequipo);
                         inventario.registrarEquipo(equipo);
 
