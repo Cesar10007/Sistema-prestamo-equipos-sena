@@ -59,7 +59,7 @@ public class InventarioPrestamo {
         return null;
     }
 
-    public Prestamo prestarEquipo(String documentoAprendiz, String codigoEquipo){
+    public Prestamo prestarEquipo(String codigoEquipo, String documentoAprendiz){
         Equipo equipo = buscarEquipoPorCodigo(codigoEquipo);
         Aprendiz aprendiz = buscarAprendizPorDocumento(documentoAprendiz);
 
